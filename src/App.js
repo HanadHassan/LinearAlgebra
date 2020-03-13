@@ -9,6 +9,7 @@ import { render } from '@testing-library/react';
 import substract from './sketches/subtract';
 import multiply from './sketches/multiply';
 
+
 /*
 export default class App extends Component {
   constructor(){
@@ -88,6 +89,8 @@ class App extends Component {
       <div>
         <h1> Vector Addition </h1>
         <P5Wrapper sketch={multiply}></P5Wrapper>
+        <P5Wrapper sketch={substract}></P5Wrapper>
+        <P5Wrapper sketch={sketch}></P5Wrapper>
       </div>
     );
   }
