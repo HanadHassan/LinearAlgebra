@@ -1,12 +1,12 @@
 import p5 from 'p5';
 
-
-
 export default function multiply(p) {
   let canvas;
+
   p.setup = () => {
-    canvas = p.createCanvas(900,600);
+    canvas = p.createCanvas(1200, 800);
     p.noStroke();
+
   }
 
   p.drawArrow = (base, vec, myColor) => {

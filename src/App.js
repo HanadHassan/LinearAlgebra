@@ -1,13 +1,44 @@
 import React, { Component } from 'react';
-import Sketch from 'react-p5';
+//import Sketch from 'react-p5';
 import P5Wrapper from 'react-p5-wrapper';
-import p5 from 'p5';
+//import p5 from 'p5';
 import sketch from './sketches/sketch';
 //import { sketch } from './sketches/sketch';
 import './App.css';
-import { render } from '@testing-library/react';
+//import { render } from '@testing-library/react';
 import substract from './sketches/subtract';
 import multiply from './sketches/multiply';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+
+const routes = [
+  {
+  path: '/substract',
+  component: substract
+},
+{
+  path: '/multiply',
+  component: multiply
+},
+{
+  path: '/sketch',
+  component: sketch
+}
+
+
+
+
+]
+
+
+
+
+
+
 
 
 /*
@@ -87,9 +118,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1> Vector Addition </h1>
+        <h1> Vector Multiplication </h1>
         <P5Wrapper sketch={multiply}></P5Wrapper>
+        <h1> Vector Substraction </h1>
         <P5Wrapper sketch={substract}></P5Wrapper>
+        <h1> Vector addition </h1>
         <P5Wrapper sketch={sketch}></P5Wrapper>
       </div>
     );
